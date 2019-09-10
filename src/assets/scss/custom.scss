@@ -1,0 +1,169 @@
+@charset "UTF-8";
+// @import '~/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+$bootstrap-sass-asset-helper: true;
+
+
+// Your variable overrides
+// $body-bg: #000;
+// $body-color: #111;
+
+
+
+
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+// $font-size-base: 16px;
+
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/print";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/type";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/code";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/forms";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/navs";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+
+
+
+
+
+
+
+/*!
+ * Bootstrap v3.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+
+
+
+
+// Reset and dependencies
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/print";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/pagination";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/pager";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/labels";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/badges";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/media";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/panels";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/wells";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/modals";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+
+
+
+
+
+@import './animate.scss';
+@import './pe-icons.scss';
+@import './style.scss';
+
+
+
+
+
+
+// $dropdown-bg: #8ECCB5;
+
+// // The dropdown menu (ul)
+// .dropdown-menu {
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   z-index: $zindex-dropdown;
+//   display: none; // none by default, but block on "open" of the menu
+//   float: left;
+//   min-width: 160px;
+//   padding: 5px 0;
+//   margin: 2px 0 0; // override default ul
+//   font-size: $font-size-base;
+//   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+//   list-style: none;
+//   background-color: $dropdown-bg;
+//   background-clip: padding-box;
+//   border: 1px solid $dropdown-fallback-border; // IE8 fallback
+//   border: 1px solid $dropdown-border;
+//   border-radius: 0;
+//   @include box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+
+//   // Aligns the dropdown menu to right
+//   //
+//   // Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]`
+//   &.pull-right {
+//     right: 0;
+//     left: auto;
+//   }
+
+//   // Dividers (basically an hr) within the dropdown
+//   .divider {
+//     @include nav-divider($dropdown-divider-bg);
+//   }
+
+//   // Links within the dropdown menu
+//   > li > a {
+//     display: block;
+//     padding: 3px 20px;
+//     clear: both;
+//     font-weight: 400;
+//     line-height: $line-height-base;
+//     color: $dropdown-link-color;
+//     white-space: nowrap; // prevent links from randomly breaking onto new lines
+
+//     &:hover,
+//     &:focus {
+//       color: $dropdown-link-hover-color;
+//       text-decoration: none;
+//       background-color: $dropdown-link-hover-bg;
+//     }
+//   }
+// }
+
+

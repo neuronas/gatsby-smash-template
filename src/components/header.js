@@ -1,35 +1,85 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useState, useEffect} from "react"
+import NavBar from './NavBar'
+import loadingBarsImg from '../assets/img/loading-bars.svg'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = ({ siteTitle }) => {
+
+  const [isLoading, setIsloading] = useState(true)
+  const [showSearch, setShowSearch] = useState(false)
+  const [value, setValue] = useState({inputSearch: ""})
+  useEffect(() => setIsloading(false), [])
+
+
+  // <div id="page-top" class="index  pace-done">
+
+  // set data
+  var navbar = {};
+  navbar.brand = 
+    {linkTo: "#", text: "React Bootstrap Navbar"};
+  navbar.links = [
+    {linkTo: "#", text: "Link 1"},
+    {linkTo: "#", text: "Link 2"},
+    {dropdown: true, text: "Dropdown", links: [
+      {linkTo: "#", text: "Dropdown Link 1"},
+      {linkTo: "#", text: "Dropdown Link 2", active: true}
+    ]},
+    {dropdown: true, text: "Dropdown2", links: [
+      {linkTo: "#", text: "Dropdown2.1 Link 1"},
+      {linkTo: "#", text: "Dropdown2.2 Link 2", active: true}
+    ]}
+  ];
+
+  const setShowSearchHandler = () => {
+    console.log("CCCCCCC")
+    setShowSearch(true)
+  }
+
+  const closeModal = (event) => {
+    console.log("CLOSEEEEE", event.cancelBubble)
+    event.stopPropagation()
+    event.cancelBubble = false
+    setShowSearch(false)
+  }
+  const doSearch = (event) => {
+    event.stopPropagation()
+    console.log("SEARCHHHH", value.inputSearch)
+
+    // event.preventDefault();
+    // return false;
+  }
+
+  const onChangeEventHandler = (event) => {
+    const { value } = event.target
+    setValue({inputSearch: value})
+  }
+
+  return (
+    <div>
+      {/* Navigation -*/}
+      {/*<NavBar {...navbar}/>*/}
+      <NavBar setShowSearch={setShowSearchHandler}/>
+
+      { isLoading &&
+        <div className="preloader">
+          <div className="preloader-img">
+            <img src={loadingBarsImg} width="100" alt="Loading icon" />
+          </div>
+        </div>        
+      }
+      { showSearch &&
+        <div id="search-wrapper" className="open" onClick={closeModal}>
+          <button type="button" className="close" >×</button>
+          <form>
+            <input type="search" value={value.inputSearch} placeholder="type keyword(s) here" onClick={event => event.stopPropagation()} onChange={onChangeEventHandler} />
+            <input type="button" value="Search" className="btn btn-primary" onClick={event => doSearch(event)} />
+          </form>
+        </div>
+      }
     </div>
-  </header>
-)
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
